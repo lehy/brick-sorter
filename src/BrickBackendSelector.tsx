@@ -3,7 +3,7 @@ import {FormControl, FormLabel, RadioGroup, Radio, FormControlLabel} from '@mate
 
 type OnBackendChanged = (backend : string) => void;
 
-function LegoBackendSelector({backend, onBackendChanged} : {backend: string, onBackendChanged: OnBackendChanged}) {
+function BrickBackendSelector({backend, onBackendChanged} : {backend: string, onBackendChanged: OnBackendChanged}) {
 
   let onChange = (_ : any, backend : string) => {
     onBackendChanged(backend);
@@ -19,4 +19,4 @@ function LegoBackendSelector({backend, onBackendChanged} : {backend: string, onB
           </FormControl>);
 }
 
-export default LegoBackendSelector;
+export default BrickBackendSelector;

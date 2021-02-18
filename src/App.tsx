@@ -5,9 +5,9 @@ import './App.css';
 import "onnxjs";
 import Paper from "@material-ui/core/Paper";
 import CssBaseline from '@material-ui/core/CssBaseline';
-import LegoInferenceSession from "./LegoInferenceSession";
-import LegoInference from "./LegoInference";
-import LegoBackendSelector from "./LegoBackendSelector";
+import BrickInferenceSession from "./BrickInferenceSession";
+import BrickInference from "./BrickInference";
+import BrickBackendSelector from "./BrickBackendSelector";
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import { InferenceSession } from 'onnxjs';
 
@@ -36,13 +36,13 @@ function App() {
   return (
       <div className="App">
       <CssBaseline />
-      <LegoInferenceSession backend={backend} onSessionInitialized={setSession} />
+      <BrickInferenceSession backend={backend} onSessionInitialized={setSession} />
       
       <div className={classes.root}>
       <Paper>
-      <LegoInference session={session} />
+      <BrickInference session={session} />
       
-      <LegoBackendSelector backend={backend} onBackendChanged={setBackend} />
+      <BrickBackendSelector backend={backend} onBackendChanged={setBackend} />
       </Paper>
       </div>
       

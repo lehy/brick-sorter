@@ -6,7 +6,7 @@ type OnSessionInitialized = (session:InferenceSession) => void;
 
 // var initialized = false;
 
-function LegoInferenceSession({backend, onSessionInitialized} : {backend?: string, onSessionInitialized: OnSessionInitialized}) {
+function BrickInferenceSession({backend, onSessionInitialized} : {backend?: string, onSessionInitialized: OnSessionInitialized}) {
   async function init() {
     console.log(`creating session`);
     var session;
@@ -38,4 +38,4 @@ function LegoInferenceSession({backend, onSessionInitialized} : {backend?: strin
   return <></>;
 };
 
-export default LegoInferenceSession;
+export default BrickInferenceSession;

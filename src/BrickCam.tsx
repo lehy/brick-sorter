@@ -1,10 +1,10 @@
 import React from 'react';
 import Webcam from "react-webcam";
-import LegoImage from "./LegoImage";
+import BrickImage from "./BrickImage";
 
-type OnImage = (image: LegoImage) => void;
+type OnImage = (image: BrickImage) => void;
 
-function LegoCam({ onImage, height }: { onImage: OnImage; height: number; }) {
+function BrickCam({ onImage, height }: { onImage: OnImage; height: number; }) {
   const webcamRef = React.useRef<Webcam>(null);
   
   const handleRawData = () => {
@@ -70,4 +70,4 @@ function LegoCam({ onImage, height }: { onImage: OnImage; height: number; }) {
   height={height} / >;
 }
 
-export default LegoCam;
+export default BrickCam;

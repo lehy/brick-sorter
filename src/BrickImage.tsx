@@ -1,7 +1,7 @@
-interface LegoImage {
+interface BrickImage {
   rgb_chw: number[];
   width: number;
   height: number;
 };
 
-export default LegoImage;
+export default BrickImage;

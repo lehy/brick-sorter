@@ -2,7 +2,7 @@ import "onnxjs";
 import { InferenceSession } from "onnxjs";
 import React from "react";
 import categories from "./categories.json";
-import LegoImage from "./LegoImage";
+import BrickImage from "./BrickImage";
 
 export interface SinglePrediction {
   value: string;
@@ -23,8 +23,8 @@ var dt_filtered = 50;
 var dt_alpha = 0.9;
 var num_step = 0;
 
-function LegoPred({ image, session, onPrediction }:
-                  { image: LegoImage | null,
+function BrickPred({ image, session, onPrediction }:
+                  { image: BrickImage | null,
                     session: InferenceSession | null, onPrediction: OnPrediction }) {
 
   function computeSinglePrediction({ output, category }:
@@ -64,9 +64,9 @@ function LegoPred({ image, session, onPrediction }:
     onPrediction(preds);
   };
   
-  async function processImage(image : LegoImage) {
+  async function processImage(image : BrickImage) {
     if (! session) {
-      console.log("LegoPred: no session");
+      console.log("BrickPred: no session");
       return;
     }
     let t0 = performance.now();
@@ -109,4 +109,4 @@ function LegoPred({ image, session, onPrediction }:
   return <></>;
 }
 
-export default LegoPred;
+export default BrickPred;

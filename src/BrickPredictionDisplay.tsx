@@ -1,8 +1,8 @@
 import React from 'react';
 import TextField from "@material-ui/core/TextField";
-import {Predictions, SinglePrediction} from "./LegoPred";
+import {Predictions, SinglePrediction} from "./BrickPred";
 
-function LegoPredictionDisplay({predictions}: {predictions:Predictions}) {
+function BrickPredictionDisplay({predictions}: {predictions:Predictions}) {
   var items : React.ReactNode[] = [];
   predictions.forEach(function(pred: SinglePrediction, name : string) {
     var pred_text;
@@ -17,5 +17,5 @@ function LegoPredictionDisplay({predictions}: {predictions:Predictions}) {
   return <div>{items}</div>;
 }
 
-export default LegoPredictionDisplay;
+export default BrickPredictionDisplay;
 
