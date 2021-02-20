@@ -24,3 +24,5 @@ yarn-error.log*
 
 *~
 *.bak
+.eslintcache
+.venv
