@@ -33,6 +33,7 @@ function App() {
   
   const classes = usePaperStyles();
 
+  // <BrickBackendSelector backend={backend} onBackendChanged={setBackend} />
   return (
       <div className="App">
       <CssBaseline />
@@ -41,8 +42,6 @@ function App() {
       <div className={classes.root}>
       <Paper>
       <BrickInference session={session} />
-      
-      <BrickBackendSelector backend={backend} onBackendChanged={setBackend} />
       </Paper>
       </div>
       
